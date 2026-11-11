@@ -85,6 +85,7 @@ require("conform").setup({
   formatters_by_ft = {
     gdscript = { "gdscript-formatter" },
     lua = { "stylua" },
+    go = { "goimports" },
   },
   format_on_save = {
     timeout_ms = 2000,

@@ -21,14 +21,16 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 export EDITOR=/usr/bin/nvim
 export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"
 export FZF_DEFAULT_COMMAND="fd --type f"
 export GODOT_BIN=$HOME/.local/bin/godot
 
 alias vim=nvim
-alias cdd="cd /home/impl/Desktop"
-alias cdg="cd /home/impl/Goinfre"
+alias cdd="cd $HOME/Desktop"
+alias cdg="cd $HOME/Goinfre"
 
 vf() {
     nvim "$(fzf)"
